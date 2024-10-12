@@ -6,7 +6,6 @@
    ```shell
    pip install -r requirements.txt
    ```
----
 
 ## 操作指南
 1. **生成训练数据集**：运行以下指令，可以在文件夹`dataset`下找到生成的数据集`image_data.npy`和`labels.npy`。在`binary_images`下存放生成的0-20数字图像的样图。
@@ -24,24 +23,14 @@
    ```shell
    python ./main.py
    ```
-<div style="text-align: center;">
-    <img src="./resource/start.png" alt="开启刷分" width="500"/>
-</div>
----
 
 ## 脚本表现
 本脚本并不以速度见长，平均速度在**1秒钟1道题目**，最佳表现是28秒做完30道题目。针对小猿口算PK的脚本，竞速的鄙视链是 **后台>抓包>图像识别**，鄙人不善奔跑，所以采用了图像识别的方法。
-<div style="text-align: center;">
-    <img src="./resource/records.png" alt="最佳纪录" width="500"/>
-</div>
+
 ## 实现思路
 
 ### 为什么采用图像识别？
 作者尝试过使用抓包，请教网安大佬指导使用charles抓包，但是不幸的是当晚小猿加入了代理检测，在大佬指导的时候就经常遇到一开代理就进入不了PK界面，但是进入别的页面都没问题，后来作者实现的时候彻底封住了，代理被完全ban了。抓包脚本出师未捷，决定采取了最像人的图像识别来做。
-<div style="text-align: center;">
-    <img src="./resource/not_good_at_run.png" alt="鄙人不善奔跑" width="500"/>
-</div>
-
 
 ### 生成数据集的思路
 做题的核心在于识别正确的数字，识别正确的数字的关键在于用足够高质量、足够符合实际截图情景的数据集训练卷积神经网络，作者自认为生成数据集的思路值得和诸君分享一下！

@@ -55,10 +55,10 @@ def generate_numbers(graph_num, num_list, images_data, labels, threshold=128):
     print("Finish!")
 
 # 基础训练：生成 0 到 20 的数字灰度图片
-graph_num = 15000
+graph_num = 10000
 generate_numbers(graph_num, list(range(0, 11)), images_data, labels)
 # 专项训练：10几
-graph_num = 150000
+graph_num = 200000
 generate_numbers(graph_num, list(range(10, 21)), images_data, labels)
 # # 专项训练：5 6 7 2
 # graph_num = 5000
