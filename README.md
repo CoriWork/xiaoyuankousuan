@@ -31,10 +31,42 @@
 ---
 
 ## 脚本表现
-本脚本并不以速度见长，平均速度在**1秒钟1道题目**，最佳表现是28秒做完30道题目。
+本脚本并不以速度见长，平均速度在**1秒钟1道题目**，最佳表现是28秒做完30道题目。但是本脚本胜在全自动刷分，只需启动脚本就可以一直上分。
 <div style="text-align: center;">
-    <img src="./resource/records.png" alt="最佳纪录" width="500"/>
+    <img src="./resource/records.png" alt="最佳纪录" width="300"/>
 </div>
+
+---
+
+## 目录结构
+```
+.
+│  create_dataset.py     # 生成数据集的程序
+│  main.py               # 运行脚本的主程序
+│  README.md
+│  requirements.txt      # 安装依赖库
+│  Roboto-Regular.ttf     # 生成数据集所用字体
+│  train.py              # 训练CNN的函数
+│
+├─binary_images          # 生成的数据集的样例，分别是0-20的图像
+│      0.png-20.png
+│
+├─good_models            # 作者得到的较好的模型参数
+│      best_model_10000.pth
+│      best_model_20000.pth
+│
+├─main_images            # 脚本运行中识别数字的截图
+│      1.png
+│      2.png
+│
+├─resource               # readme文档所需的图片
+│      not_good_at_run.png
+│      records.png
+│      start.png
+│
+└─saved_models           # 运行脚本使用的CNN参数
+        best_model.pth
+```
 
 ---
 
