@@ -30,7 +30,7 @@ class NumberClassifier(nn.Module):
 
 # 加载模型
 model = NumberClassifier()
-model.load_state_dict(torch.load('saved_models/best_model.pth'))
+model.load_state_dict(torch.load('saved_models/best_model.pth', weights_only=True))
 model.eval()  # 设置模型为评估模式
 print("Load finished!")
 
@@ -127,7 +127,7 @@ def pk_and_next_pk(window_x, window_y, width, height):
         next_num1 = int(predict_image(model, screenshot1, threshold))
         next_num2 = int(predict_image(model, screenshot2, threshold))
         print(f"{num1} ### {num2}")
-        print(f"{next_num1} *** {next_num2}")
+        print(f"{next_num1} --- {next_num2}")
         # 当前题目判断
         if last_num1 == num1 and last_num2 == num2:
             wrong_count += 1
