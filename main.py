@@ -156,7 +156,7 @@ def pk_and_next_pk(window_x, window_y, width, height):
             else:
                 draw_less_sign(window_x + bias_x, window_y + bias_y, size, duration)
         
-        time.sleep(0.28)
+        time.sleep(0.3)
         
         # 下一道题目判断
         if next_num1 > next_num2:
